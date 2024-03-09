@@ -1,0 +1,44 @@
+.container{
+  width: 500px;
+  height: 350px;
+}
+
+.flashcard{
+  height: 100%;
+  width: 100%;
+  transition: 1500ms;
+  position: relative;
+}
+
+.container:hover > .flashcard{
+  cursor: pointer;
+  transform: rotateY(180deg);
+  transition: 1500ms;
+  transform-style: preserve-3d;
+}
+
+.flashcard-front,
+.flashcard-back{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 2em;
+}
+
+.flashcard-front{
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flashcard-back{
+  background-color: gray;
+  color: black;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
